@@ -169,12 +169,12 @@
                 status.textContent = '正在录制屏幕...';
                 showToast('已开始录制');
                 
-                // 设置自动停止录制的定时器 (1小时)
+                // 设置自动停止录制的定时器 (5分钟)
                 autoStopTimer = setTimeout(() => {
                     if (isRecording) {
                         stopRecording();
                     }
-                }, 3600000);
+                }, 300000);
             } catch (error) {
                 console.error('录制失败:', error);
                 showToast('录制失败，5秒后重试', 5000);
